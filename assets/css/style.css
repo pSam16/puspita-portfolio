@@ -89,6 +89,10 @@ ul{
     background-color: #151515;
     position: relative;
     height: 972px;
+    width: 100%;
+    background: url(../img/banner_bg.png);
+    background-size: cover;
+    background-position: center;
 }
 .ban-back {
     width: 50%;
@@ -111,12 +115,6 @@ ul{
 }
 .ban-row{
     align-items: center;
-}
-.banner{
-    width: 100%;
-    background: url(../img/banner_bg.png);
-    background-size: cover;
-    background-position: center;
 }
 .ban-text01 {
     position: absolute;
@@ -799,54 +797,368 @@ ul{
             font-weight: 500;
         }
 
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .section-title {
-                font-size: 2rem;
-            }
+/*--------------------------------------------------- Responsive Design */
 
-            .portfolio-grid {
-                grid-template-columns: 1fr;
-                gap: 20px;
-                padding: 0 10px;
-            }
+/* Extra small devices (phones, 576px and down) */
+@media (max-width: 575.98px) {
+    .head01 {
+        font-size: 35px;
+        letter-spacing: 2px;
+    }
+    
+    .banner {
+        height: 400px;
+        background-position: center center;
+        background-attachment: scroll;
+    }
+    
+    .ban-back {
+        width: 80%;
+        right: 10%;
+        bottom: 0;
+        max-width: 300px;
+    }
+    
+    .ban-text01 {
+        left: 50%;
+        bottom: 20%;
+        transform: translateX(-50%);
+        text-align: center;
+    }
+    
+    .about-bx img {
+        width: 90%;
+    }
+    
+    .abt-bx {
+        padding: 50px 0;
+    }
+    
+    .about-text p {
+        font-size: 14px;
+    }
+    
+    .btn01 {
+        width: 80%;
+        padding: 12px 30px;
+        font-size: 14px;
+        min-height: 44px; /* Touch target size */
+    }
+    
+    .experience-section {
+        padding: 50px 0;
+    }
+    
+    .timeline-item {
+        padding: 15px;
+    }
+    
+    .timeline-year {
+        font-size: 1rem;
+    }
+    
+    .timeline-title {
+        font-size: 1.1rem;
+    }
+    
+    .progress {
+        width: 120px;
+        height: 120px;
+        line-height: 120px;
+    }
+    
+    .progress > span {
+        width: 50%;
+        height: 100%;
+    }
+    
+    .progress .progress-bar {
+        border-width: 5px;
+    }
+    
+    .progress .progress-value div {
+        font-size: 14px;
+    }
+    
+    .progress-name {
+        font-size: 12px;
+        margin-top: 10px;
+    }
+    
+    .tool-icon {
+        width: 50px;
+        height: 50px;
+        margin: 10px;
+    }
+    
+    .filter-buttons {
+        flex-wrap: wrap;
+        gap: 8px;
+        padding: 0 10px;
+    }
+    
+    .filter-btn {
+        padding: 8px 16px;
+        font-size: 0.85rem;
+        min-height: 44px; /* Touch target size */
+    }
+    
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 0 10px;
+    }
+    
+    .portfolio-item {
+        min-height: 200px; /* Ensure touch targets */
+    }
+    
+    .project-info {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .carousel-item img {
+        height: 250px;
+    }
+    
+    .tech-tag {
+        font-size: 0.8rem;
+        padding: 4px 8px;
+    }
+    
+    .collab-bx {
+        padding: 15px;
+    }
+    
+    .sign {
+        width: 70%;
+    }
+    
+    .social-icons {
+        gap: 5px;
+    }
+    
+    .social-icon {
+        width: 44px; /* Minimum touch target */
+        height: 44px;
+        min-width: 44px;
+        min-height: 44px;
+    }
+}
 
-            .filter-buttons {
-                gap: 10px;
-                padding: 0 20px;
-            }
+/* Small devices (tablets, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .head01 {
+        font-size: 50px;
+        letter-spacing: 3px;
+    }
+    
+    .banner {
+        height: 600px;
+    }
+    
+    .ban-back {
+        width: 60%;
+        right: 20%;
+    }
+    
+    .ban-text01 {
+        left: 60%;
+        transform: none;
+    }
+    
+    .about-bx img {
+        width: 80%;
+    }
+    
+    .abt-bx {
+        padding: 80px 0;
+    }
+    
+    .btn01 {
+        width: 50%;
+    }
+    
+    .progress {
+        width: 140px;
+        height: 140px;
+        line-height: 140px;
+    }
+    
+    .tool-icon {
+        width: 60px;
+        height: 60px;
+        margin: 15px;
+    }
+    
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    .carousel-item img {
+        height: 300px;
+    }
+}
 
-            .filter-btn {
-                padding: 10px 20px;
-                font-size: 0.9rem;
-            }
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .head01 {
+        font-size: 60px;
+    }
+    
+    .banner {
+        height: 800px;
+    }
+    
+    .ban-back {
+        width: 55%;
+        right: 25%;
+    }
+    
+    .ban-text01 {
+        left: 65%;
+    }
+    
+    .about-bx img {
+        width: 75%;
+    }
+    
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .carousel-item img {
+        height: 350px;
+    }
+}
 
-            .project-info {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .head01 {
+        font-size: 70px;
+    }
+    
+    .banner {
+        height: 900px;
+    }
+    
+    .ban-text01 {
+        left: 68%;
+    }
+}
 
-            .carousel-item img {
-                height: 300px;
-            }
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .head01 {
+        font-size: 75px;
+    }
+    
+    .banner {
+        height: 972px;
+    }
+    
+    .ban-text01 {
+        left: 67%;
+    }
+}
+
+/* General mobile adjustments */
+@media (max-width: 767.98px) {
+    .padding {
+        padding: 50px 0;
+    }
+    
+    .hd {
+        font-size: 30px;
+        margin-bottom: 30px;
+    }
+    
+    .sub-hd {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+    
+    .para {
+        font-size: 14px;
+    }
+    
+    .navbar {
+        padding: 10px 0;
+    }
+    
+    .nav-link {
+        padding: 10px !important;
+        font-size: 14px;
+        text-align: center;
+    }
+    
+    .navbar-toggler {
+        border: none;
+        background-color: #03CAD6;
+    }
+    
+    .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='m4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+    
+    /* Close button styling for mobile navbar */
+    .navbar-collapse .btn-close {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        z-index: 1000;
+        opacity: 0.8;
+        transition: opacity 0.3s ease;
+    }
+    
+    .navbar-collapse .btn-close:hover {
+        opacity: 1;
+    }
+    
+    /* Adjust navbar layout for mobile with close button */
+    @media (max-width: 991.98px) {
+        .navbar-collapse {
+            position: relative;
+            padding-top: 50px; /* Make room for close button */
         }
-
-        .hidden {
-            display: none !important;
+        
+        .navbar-nav {
+            width: 100%;
+            text-align: center;
         }
-
-                /* Projects Section */
-        .projects-section {
-            padding: 100px 0;
-            background-color: #151515;
-        }
-
-        .project-card {
-            border-radius: 1%;
-            overflow: hidden;
-            transition: transform 0.3s ease;
-            margin-bottom: 30px;
-        }
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.5rem;
+    }
+    
+    .hero-image {
+        width: 250px;
+        height: 250px;
+    }
+    
+    .projects-section {
+        padding: 50px 0;
+    }
+    
+    .collab-section {
+        padding: 50px 0;
+    }
+    
+    .contact-section {
+        padding: 50px 0;
+    }
+}
 
         .project-card:hover {
             transform: translateY(-10px);
@@ -860,7 +1172,6 @@ ul{
             color: #fff;
         }
 .collab-section{
-                padding: 100px 0;
             background-color: #222222;
 }
 .collab-bx{

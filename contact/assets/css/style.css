@@ -1,0 +1,262 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #151515;
+    font-family: "Montserrat", sans-serif;
+}
+
+.padding{
+    padding: 100px 0;
+}
+
+p{
+    color: #fff;
+    text-align: justify;
+}
+
+a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+ul{
+    list-style-type: none;
+    padding-left: 0 !important;
+}
+
+.head01{
+    color: #fff;
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.highlight{
+    color: #03CAD6;
+}
+
+.para{
+    color: #f1f2fd;
+    font-size: 16px;
+}
+
+/*--------------------------------------------------- header section start */
+.header{
+    background-color: #222222;
+}
+
+.navbar {
+    font-weight: 600;
+    padding: 15px 0px;
+}
+
+.navbar-light .navbar-nav .nav-link.active {
+    color:#03CAD6 !important;
+}
+
+.nav-link {
+    color:#fff !important;
+    padding: 15px !important;
+}
+
+.nav-link:hover{
+    color: #03CAD6 !important;
+}
+
+.me-auto {
+    margin-right: 0 !important;
+}
+
+/* Contact Section */
+.contact-section {
+    background-color: #151515;
+}
+
+.contact-form {
+    background-color: #222222;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.form-control {
+    background-color: #333;
+    border: 1px solid #555;
+    color: #fff;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.form-control::placeholder {
+    color: #ccc;
+}
+
+.form-control:focus {
+    background-color: #333;
+    border-color: #03CAD6;
+    color: #fff;
+    box-shadow: 0 0 0 0.2rem rgba(3, 202, 214, 0.25);
+}
+
+.btn01 {
+    width: 100%;
+    border: none;
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    outline: none;
+    overflow: hidden;
+    position: relative;
+    color: #fff;
+    font-weight: 700;
+    font-size: 15px;
+    background-color: #03CAD6;
+    padding: 15px 50px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.20);
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.btn01:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 7px 20px rgba(0,0,0,0.3);
+}
+
+.contact-info {
+    background-color: #222222;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.contact-info p {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #fff;
+    text-align: center;
+}
+
+.contact-info i {
+    color: #fff;
+    width: 20px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.social-icon {
+    width: 50px;
+    height: 50px;
+    background-color: #333;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    background-color: #03CAD6;
+    transform: translateY(-3px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .padding {
+        padding: 50px 0;
+    }
+    
+    .head01 {
+        font-size: 30px;
+        margin-bottom: 30px;
+    }
+    
+    .contact-form {
+        padding: 20px;
+    }
+    
+    .form-control {
+        padding: 12px;
+        margin-bottom: 15px;
+    }
+    
+    .btn01 {
+        padding: 12px 30px;
+        font-size: 14px;
+    }
+    
+    .contact-info {
+        padding: 20px;
+    }
+    
+    .contact-info p {
+        font-size: 16px;
+    }
+    
+    .social-icons {
+        gap: 15px;
+    }
+    
+    .social-icon {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .navbar {
+        padding: 10px 0;
+    }
+    
+    .nav-link {
+        padding: 10px !important;
+        font-size: 14px;
+        text-align: center;
+    }
+    
+    .navbar-toggler {
+        border: none;
+        background-color: #03CAD6;
+    }
+    
+    .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='m4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+    
+    /* Close button styling for mobile navbar */
+    .navbar-collapse .btn-close {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        z-index: 1000;
+        opacity: 0.8;
+        transition: opacity 0.3s ease;
+    }
+    
+    .navbar-collapse .btn-close:hover {
+        opacity: 1;
+    }
+    
+    /* Adjust navbar layout for mobile with close button */
+    @media (max-width: 991.98px) {
+        .navbar-collapse {
+            position: relative;
+            padding-top: 50px; /* Make room for close button */
+        }
+        
+        .navbar-nav {
+            width: 100%;
+            text-align: center;
+        }
+    }
+}

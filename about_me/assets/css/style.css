@@ -161,7 +161,195 @@ ul{
      line-height: 1.6;
 }
 
-/* Responsive Design */
+/*--------------------------------------------------- Responsive Design */
+
+/* Extra small devices (phones, 576px and down) */
+@media (max-width: 575.98px) {
+    .head01 {
+        font-size: 35px;
+        letter-spacing: 2px;
+    }
+    
+    .hd {
+        font-size: 30px;
+        margin-bottom: 30px;
+    }
+    
+    .sub-hd {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+    
+    .para {
+        font-size: 14px;
+    }
+    
+    .navbar {
+        padding: 10px 0;
+    }
+    
+    .nav-link {
+        padding: 10px !important;
+        font-size: 14px;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .timeline-item {
+        padding: 15px;
+    }
+    
+    .timeline-year {
+        font-size: 1rem;
+    }
+    
+    .timeline-title {
+        font-size: 1.1rem;
+    }
+    
+    .social-icon {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .horizontal-ticker__slide {
+        width: 120px;
+        aspect-ratio: 400 / 273;
+    }
+    
+    .horizontal-ticker__slide h1 {
+        font-size: 80px;
+    }
+}
+
+/* Small devices (tablets, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .head01 {
+        font-size: 50px;
+        letter-spacing: 3px;
+    }
+    
+    .horizontal-ticker__slide {
+        width: 140px;
+    }
+    
+    .horizontal-ticker__slide h1 {
+        font-size: 100px;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .head01 {
+        font-size: 60px;
+    }
+    
+    .horizontal-ticker__slide h1 {
+        font-size: 120px;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .head01 {
+        font-size: 70px;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .head01 {
+        font-size: 75px;
+    }
+}
+
+/* General mobile adjustments */
+@media (max-width: 767.98px) {
+    .padding {
+        padding: 50px 0;
+    }
+    
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 0 10px;
+    }
+    
+    .filter-buttons {
+        flex-wrap: wrap;
+        gap: 8px;
+        padding: 0 10px;
+    }
+    
+    .filter-btn {
+        padding: 8px 16px;
+        font-size: 0.85rem;
+    }
+    
+    .project-info {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .carousel-item img {
+        height: 250px;
+    }
+    
+    .tech-tag {
+        font-size: 0.8rem;
+        padding: 4px 8px;
+    }
+    
+    .navbar {
+        padding: 10px 0;
+    }
+    
+    .nav-link {
+        padding: 10px !important;
+        font-size: 14px;
+        text-align: center;
+    }
+    
+    .navbar-toggler {
+        border: none;
+        background-color: #03CAD6;
+    }
+    
+    .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='m4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+    
+    /* Close button styling for mobile navbar */
+    .navbar-collapse .btn-close {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        z-index: 1000;
+        opacity: 0.8;
+        transition: opacity 0.3s ease;
+    }
+    
+    .navbar-collapse .btn-close:hover {
+        opacity: 1;
+    }
+    
+    /* Adjust navbar layout for mobile with close button */
+    @media (max-width: 991.98px) {
+        .navbar-collapse {
+            position: relative;
+            padding-top: 50px; /* Make room for close button */
+        }
+        
+        .navbar-nav {
+            width: 100%;
+            text-align: center;
+        }
+    }
+}
+
+        /* Responsive Design */
         @media (max-width: 768px) {
             .section-title {
                 font-size: 2rem;
