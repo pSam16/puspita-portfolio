@@ -63,6 +63,21 @@ ul{
     font-weight: 600;
     padding: 15px 0px;
 }
+
+/* Sticky navbar on scroll */
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: background 0.3s ease, backdrop-filter 0.3s ease, box-shadow 0.3s ease;
+}
+
+.header.scrolled {  
+    background: rgba(20, 20, 20, 0.55) !important;
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.35);
+}
 .navbar-light .navbar-nav .nav-link.active {
     color:#03CAD6 !important;
 }
@@ -578,25 +593,27 @@ ul{
 
         .portfolio-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px 20px;
             padding: 0 20px;
         }
 
         .portfolio-item {
-            background: var(--card-bg);
-            border-radius: 20px;
-            overflow: hidden;
-            position: relative;
             cursor: pointer;
-            transition: all 0.4s ease;
-            border: 1px solid #03CAD6;
-            aspect-ratio: 1.2;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
         }
 
-        .portfolio-item:hover {
-            transform: translateY(-10px) scale(1.02);
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5), 0 0 30px rgba(255, 107, 53, 0.2);
+        .portfolio-panel {
+            width: 100%;
+            aspect-ratio: 1.4;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        .portfolio-item:hover .portfolio-panel {
+            box-shadow: 0 12px 35px rgba(3, 202, 214, 0.25);
         }
 
         .portfolio-image {
@@ -604,85 +621,73 @@ ul{
             height: 100%;
             object-fit: cover;
             transition: transform 0.4s ease;
+            display: block;
         }
 
         .portfolio-item:hover .portfolio-image {
-            transform: scale(1.1);
+            transform: scale(1.06);
         }
 
-        .portfolio-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg, #03CAD6, #5732DC);
+        /* Info below image */
+        .portfolio-info {
+            padding: 14px 4px 6px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .portfolio-type {
+            font-size: 0.7rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.45);
+            margin-bottom: 6px;
+        }
+
+        .portfolio-name {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: #ffffff;
             display: flex;
             align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            opacity: 0;
-            transition: all 0.4s ease;
+            justify-content: space-between;
+            gap: 8px;
+            transition: color 0.3s ease;
         }
 
-        .portfolio-item:hover .portfolio-overlay {
-            opacity: 1;
+        .portfolio-item:hover .portfolio-name {
+            color: #03CAD6;
         }
 
-        .portfolio-title {
-            color: white;
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-bottom: 10px;
-            transform: translateY(30px);
-            transition: transform 0.4s ease 0.1s;
-        }
-
-        .portfolio-category {
-            color: rgba(255, 255, 255, 0.9);
+        .proj-arrow {
             font-size: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transform: translateY(30px);
-            transition: transform 0.4s ease 0.2s;
+            opacity: 0.6;
+            transition: opacity 0.3s ease, transform 0.3s ease;
         }
 
-        .portfolio-item:hover .portfolio-title,
-        .portfolio-item:hover .portfolio-category {
-            transform: translateY(0);
+        .portfolio-item:hover .proj-arrow {
+            opacity: 1;
+            transform: translate(3px, -3px);
         }
 
-        /* View All Box */
-        .view-all-item {
+        /* View All Panel */
+        .view-all-panel {
             display: flex;
             align-items: center;
             justify-content: center;
             background: var(--card-bg);
-            border-radius: 20px;
-            overflow: hidden;
-            position: relative;
-            cursor: pointer;
-            transition: all 0.4s ease;
-            border: 1px solid #03CAD6;
-            aspect-ratio: 1.2;
+            border: 1px dashed rgba(3, 202, 214, 0.5);
         }
 
-        .view-all-item .portfolio-overlay {
-            opacity: 1;
-            background: transparent;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 15px;
-        }
-
-        .view-all-btn {
-            width: auto;
-            padding: 12px 30px;
+        .view-all-link {
+            font-size: 1.1rem;
             font-weight: 700;
-            border-radius: 6px;
+            letter-spacing: 2px;
+            color: #03CAD6;
             text-decoration: none;
-            color: #fff;
+            transition: color 0.3s ease;
+        }
+
+        .view-all-item:hover .view-all-link {
+            color: #ffffff;
         }
 
         /* Modal Styles */
@@ -698,103 +703,108 @@ ul{
         }
 
         .modal-header {
-            border-bottom: 1px solid var(--border-color);
-            padding: 25px;
-        }
-
-        .modal-title {
-            color: #fff;
-            font-weight: 700;
-            font-size: 2rem;
+            border-bottom: none;
+            padding: 20px 30px 0;
         }
 
         .btn-close {
             filter: invert(1);
+            opacity: 0.7;
         }
 
         .modal-body {
-            padding: 25px;
+            padding: 10px 50px 50px;
+            max-height: 85vh;
+            overflow-y: auto;
         }
 
-
-
-        .carousel-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 15px;
-
+        /* Description block */
+        .proj-modal-top {
+            text-align: center;
+            padding: 30px 40px 24px;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+            margin-bottom: 28px;
         }
 
-        .carousel-control-prev,
-        .carousel-control-next {
-            width: 50px;
-            height: 50px;
-            background: #5732DC;
-            border-radius: 50%;
-            top: 50%;
-            transform: translateY(-50%);
+        .proj-modal-meta {
+            font-size: 0.72rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.4);
+            margin-bottom: 14px;
         }
 
-        .carousel-control-prev {
-            left: 20px;
+        .proj-modal-title {
+            color: #ffffff;
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 18px;
         }
 
-        .carousel-control-next {
-            right: 20px;
+        .proj-modal-desc {
+            color: rgba(255,255,255,0.65);
+            font-size: 1rem;
+            line-height: 1.85;
+            max-width: 620px;
+            margin: 0 auto;
         }
 
-        .project-info {
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 30px;
+        /* Details row */
+        .proj-modal-details {
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+            padding: 0 0 28px;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+            margin-bottom: 36px;
         }
 
-.project-description {
-    color: var(--text-muted);
-    line-height: 1.8;
-    font-size: 1.1rem;
-    background-color: #fff;
-    text-align: center;
-    border-radius: 15px;
-    padding: 38px;
-}
-
-        .project-details {
-            background: #fff;
-            padding: 25px;
-            border-radius: 15px;
-            border: 1px solid rgba(255, 107, 53, 0.1);
+        .proj-detail-item {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
         }
 
-        .detail-item {
-            margin-bottom: 15px;
+        .proj-detail-label {
+            font-size: 0.68rem;
+            letter-spacing: 2px;
+            color: rgba(255,255,255,0.35);
         }
 
-        .detail-label {
-            color: var(--primary-orange);
-            font-weight: 600;
-            margin-bottom: 5px;
-        }
-
-        .detail-value {
-            color: var(--text-light);
+        .proj-detail-value {
+            color: #ffffff;
+            font-size: 0.95rem;
+            font-weight: 500;
         }
 
         .tech-stack {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 10px;
+            gap: 8px;
+            margin-top: 2px;
         }
 
         .tech-tag {
-            background: var(--primary-orange);
-            color: #5732DC;
-            padding: 5px 15px;
+            background: rgba(3, 202, 214, 0.12);
+            color: #03CAD6;
+            border: 1px solid rgba(3, 202, 214, 0.3);
+            padding: 3px 12px;
             border-radius: 20px;
-            font-size: 0.9rem;
+            font-size: 0.8rem;
             font-weight: 500;
+        }
+
+        /* Stacked images */
+        .proj-modal-images {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .proj-modal-img {
+            width: 100%;
+            border-radius: 10px;
+            display: block;
         }
 
 /*--------------------------------------------------- Responsive Design */
@@ -910,7 +920,7 @@ ul{
     }
     
     .portfolio-item {
-        min-height: 200px; /* Ensure touch targets */
+        min-height: unset;
     }
     
     .project-info {
@@ -1280,7 +1290,7 @@ ul{
   }
   button.back-to-top:hover,
   button.back-to-top:active,
-  button.back-to-top:focus,{
+  button.back-to-top:focus {
     outline: 0 !important;
   }
   button.back-to-top::before,
