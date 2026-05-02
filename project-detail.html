@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/4.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -45,7 +46,7 @@
         }
         .dropdown-item { color: #fff; }
         .dropdown-item:hover { background-color: rgba(3,202,214,0.12); color: #03CAD6; }
-        .navbar-toggler { border: none; background-color: #03CAD6; }
+        .navbar-toggler { border: none; background-color: #03CAD6; color: #fff; }
 
         /* ── Page container ── */
         .detail-page {
@@ -213,34 +214,25 @@
 
     <!-- Navbar -->
     <section class="header">
-      <nav class="navbar navbar-expand-lg navbar-light">
+      <nav class="navbar navbar-expand-md navbar-light">
         <div class="container">
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+            <i class="fi fi-rr-bars-staggered"></i>
           </button>
           <div class="collapse navbar-collapse d-flex justify-content-center" id="navbarSupportedContent">
-            <button class="btn-close btn-close-white d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Close navigation"></button>
+            <button class="btn-close btn-close-white d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Close navigation"></button>
             <ul class="navbar-nav mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">HOME</a>
+                <a class="nav-link" href="home.html">HOME</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="about_me/index.html">ABOUT ME</a>
               </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  PROJECTS
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                 <li><a class="dropdown-item" href="all-projects.html">ALL DESIGN</a></li>
-                 <li><a class="dropdown-item" href="#">WEB DESIGN</a></li>
-                 <li><a class="dropdown-item" href="#">UI UX DESIGN</a></li>
-                 <li><a class="dropdown-item" href="#">GRAPHICS DESIGN</a></li>
-
-                </ul>
+              <li class="nav-item">
+                <a class="nav-link active" href="all-projects.html">PROJECTS</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="contact/index.html" >CONTACT ME</a>
+                <a class="nav-link" href="contact/index.html">CONTACT ME</a>
               </li>
             </ul>
           </div>
@@ -357,7 +349,7 @@
             page.innerHTML = `
                 <div class="not-found">
                     <h2>Project not found</h2>
-                    <p><a href="index.html" style="color:#03CAD6;">← Back to home</a></p>
+                    <p><a href="home.html" style="color:#03CAD6;">← Back to home</a></p>
                 </div>`;
         } else {
             document.title = project.title + ' — Portfolio';
