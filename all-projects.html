@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>All Projects</title>
 </head>
 <body>
@@ -54,7 +55,7 @@
             </div>
 
             <!-- Portfolio Grid (sorted by year: newest first) -->
-            <div class="portfolio-grid" id="portfolioGrid">
+            <div class="portfolio-grid" id="portfolioGrid" data-aos="fade-up" data-aos-duration="2000">
 
                 <!-- 2025 -->
                 <div class="portfolio-item" data-category="ui-design" data-project="project6" data-year="2025">
@@ -159,7 +160,7 @@
                     <h3 class="head01 mb-4">CONTACT <span class="highlight">ME</span></h3>
                     <p><strong>EMAIL</strong><br>samantapuspita05@gmail.com</p>
                     <div class="row">
-                        <div class="col-4 col-md-4 contact-info">
+                        <div class="col-lg-4 col-md-6 contact-info">
                         <div class="social-icons">
                         <a href="https://github.com/pSam16" class="social-icon" target="_blank">
                             <i class="fa-brands fa-github"></i>
@@ -202,6 +203,20 @@
         // Filter
         const filterBtns    = document.querySelectorAll('.filter-btn');
         const portfolioItems = document.querySelectorAll('.portfolio-item');
+        const portfolioGrid = document.getElementById('portfolioGrid');
+
+        function sortPortfolioByYearDesc() {
+            const items = Array.from(portfolioGrid.querySelectorAll('.portfolio-item'));
+            items.sort((a, b) => {
+                const yearA = parseInt(a.dataset.year) || 0;
+                const yearB = parseInt(b.dataset.year) || 0;
+                if (yearA !== yearB) return yearB - yearA;
+                return a.dataset.project.localeCompare(b.dataset.project);
+            });
+            items.forEach(item => portfolioGrid.appendChild(item));
+        }
+
+        sortPortfolioByYearDesc();
 
         function applyFilter(filter) {
             filterBtns.forEach(b => b.classList.remove('active'));
@@ -237,6 +252,10 @@
                 if (projectData[id]) window.location.href = `project-detail.html?id=${id}`;
             });
         });
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
     </script>
 </body>
 </html>

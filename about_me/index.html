@@ -12,6 +12,7 @@
     
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <title>Portfolio</title>
 </head>
@@ -54,7 +55,7 @@
                     <h2 class="head01 experience-hd collab-txt">ABOUT <br><span class="highlight">ME</span></h2>
 
                 </div>
-                <div class="col-12 col-md-6">
+                <div class="col-12 col-md-6" data-aos="fade-up" data-aos-duration="2000">
                     <div class="about-txt">
                         <p>My work spans across UI design, where I develop intuitive interfaces and custom icons that enhance user experience, to front-end development with HTML that brings designs into functional reality.
  <br>                     From designing eye-catching educational reel thumbnails and social media posts to crafting comprehensive brand identities through logos, certificates, and corporate materials, I bring ideas to life with purpose and polish.  </p>
@@ -156,7 +157,7 @@
      <section>
         <div class="experience padding">
             <div class="container">
-                <div class="exp-main">
+                <div class="exp-main" data-aos="fade-up" data-aos-duration="2000">
                     <h2 class="head01">EXPERIENCE</h2>
                         <div class="timeline-item">
                         <div class="timeline-year">2024-present</div>
@@ -183,7 +184,7 @@
      <section>
         <div class="experience padding">
             <div class="container">
-                <div class="exp-main">
+                <div class="exp-main" data-aos="fade-up" data-aos-duration="2000">
                     <h2 class="head01">CERTIFICATION</h2>
                     <!-- <div class="timeline-item">
                         <div class="timeline-year">2026</div>
@@ -193,31 +194,31 @@
                         </div>
                     </div> -->
         <div class="timeline-item">
-            <div class="timeline-year">2026</div>
+            <div class="timeline-year">Apr, 2026</div>
             <div class="timeline-title">
                 <a href="https://coursera.org/share/53c9e6522a9c0ade6f2af49d0d5d4319" class="item-link" target="_blank">Google UX Design</a>
             </div>
         </div>
         <div class="timeline-item">
-            <div class="timeline-year">2025</div>
+            <div class="timeline-year">Dec, 2025</div>
             <div class="timeline-title">
                 <a href="https://coursera.org/share/8bbcbd243922005c5b347957fe8d2461" class="item-link" target="_blank">Build a free website with WordPress</a>
             </div>
         </div>
         <div class="timeline-item">
-            <div class="timeline-year">2025</div>
+            <div class="timeline-year">Nov, 2025</div>
             <div class="timeline-title">
                 <a href="https://coursera.org/share/2d0f2c0e6aec5eb56a7e17962d7139d6" class="item-link" target="_blank">Getting Started with Microsoft PowerPoint</a>
             </div>
         </div>
         <div class="timeline-item">
-            <div class="timeline-year">2025</div>
+            <div class="timeline-year">Nov, 2025</div>
             <div class="timeline-title">
                 <a href="https://coursera.org/share/f7363ff96a61f094fe7e802eacb94034" class="item-link" target="_blank">Design Online Course Printables using Canva</a>
             </div>
         </div>
         <div class="timeline-item">
-            <div class="timeline-year">2025</div>
+            <div class="timeline-year">Nov, 2025</div>
             <div class="timeline-title">
                 <a href="https://coursera.org/share/0dd838d4a162201282aed792d59a4a75" class="item-link" target="_blank">Use Canva to Design Digital Course Collateral</a>
             </div>
@@ -246,7 +247,7 @@
      <section>
         <div class="experience padding">
             <div class="container">
-                <div class="exp-main">
+                <div class="exp-main" data-aos="fade-up" data-aos-duration="2000">
                     <h2 class="head01">EDUCATION</h2>
                         <div class="timeline-item">
                         <div class="timeline-year">2023-2026</div>
@@ -269,22 +270,23 @@
      </section>
 
 
-      <!-- Contact Section -->
-    <section id="contact" class="contact-section">
+<!-- Contact Section --> 
+    <section id="contact" class="contact-section padding">
+
         <div class="sign">
             <img src="assets/img/Puspita-sign.png" alt="">
         </div>
         <!-- <div class="cross">
             <img src="assets/img/cross.png" alt="">
         </div> -->
-        <div class="container">
+<div class="container">
             
             <div class="row">
                 <div class="">
                     <h3 class="head01 mb-4">CONTACT <span class="highlight">ME</span></h3>
-					<p><strong>EMAIL</strong><br>samantapuspita05@gmail.com</p>
+                    <p><strong>EMAIL</strong><br>samantapuspita05@gmail.com</p>
                     <div class="row">
-                        <div class="col-4 col-md-4 contact-info">
+                        <div class="col-lg-4 col-md-6 contact-info">
                         <div class="social-icons">
                         <a href="https://github.com/pSam16" class="social-icon" target="_blank">
                             <i class="fa-brands fa-github"></i>
@@ -304,17 +306,10 @@
                     </div>
 
                         </div>
-                        <div class="col-4 col-md-4">
-
-                        </div>
-
-                        <div class="col-4 col-md-4 contact-info">
-                            <!-- <p><strong>ADDRESS:</strong><br>
-                            B.B.A Lane, Howrah, WB</p> -->
-
-                        </div>
 
                     </div>
+                    
+
                 </div>
             </div>
         </div>
@@ -623,6 +618,10 @@ $('button.back-to-top').click(function() {
                 navbar.style.backgroundColor = 'rgba(26, 26, 26, 0.95)';
             }
         });
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
     </script>
 
 
