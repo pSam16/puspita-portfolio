@@ -354,33 +354,7 @@
 <body>
 
     <!-- Navbar -->
-    <section class="header">
-      <nav class="navbar navbar-expand-md navbar-light">
-        <div class="container">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <i class="fi fi-rr-bars-staggered"></i>
-          </button>
-          <div class="collapse navbar-collapse d-flex justify-content-center" id="navbarSupportedContent">
-            <button class="btn-close btn-close-white d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Close navigation"></button>
-            <ul class="navbar-nav mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link" href="home.html">HOME</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="about_me/index.html">ABOUT ME</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" href="all-projects.html">PROJECTS</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contact/index.html">CONTACT ME</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>  
-  
-    </section>
+
 
     <!-- Close button -->
     <a class="close-btn" id="closeBtn" href="all-projects.html" aria-label="Close project">&#x2715;</a>
@@ -406,8 +380,8 @@
         // doesn't block the Bootstrap ✕ inside the expanded menu
         const navCollapseEl = document.getElementById('navbarSupportedContent');
         const closeBtn      = document.getElementById('closeBtn');
-        navCollapseEl.addEventListener('show.bs.collapse',   () => closeBtn.style.display = 'none');
-        navCollapseEl.addEventListener('hidden.bs.collapse', () => closeBtn.style.display = 'flex');
+        //navCollapseEl.addEventListener('show.bs.collapse',   () => closeBtn.style.display = 'none');
+        //navCollapseEl.addEventListener('hidden.bs.collapse', () => closeBtn.style.display = 'flex');
 
         // Close the mobile navbar when a nav-link is tapped, without
         // re-initializing Bootstrap's Collapse (which broke link navigation)
